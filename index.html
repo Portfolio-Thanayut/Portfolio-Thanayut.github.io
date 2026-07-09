@@ -3,171 +3,322 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio ของนายธนายุทธ ปานสุด ครูคอมพิวเตอร์และเทคโนโลยีการศึกษา">
+    <meta name="theme-color" content="#2563eb">
     <title>Portfolio - THANAYUT</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232563eb'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-size='30' font-family='Arial' font-weight='700' fill='white'%3ET%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav class="navbar" aria-label="เมนูหลัก">
+        <a class="logo" href="#home" aria-label="กลับหน้าแรก">
+            <span class="logo-mark">T</span>
+            <span class="logo-text">Thanayut</span>
+        </a>
 
-    <nav class="navbar">
-        <div class="logo">&lt;Portfolio /&gt;</div>
-        <ul class="nav-links">
-            <li><a href="#home">หน้าแรก</a></li>
-            <li><a href="#about">ประวัติ</a></li>
-            <li><a href="#skills">ทักษะ</a></li>
-            <li><a href="#gallery">ผลงาน</a></li>
-            <li><a href="#contact">ติดต่อ</a></li>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="nav-link active">หน้าแรก</a></li>
+            <li><a href="#about" class="nav-link">ประวัติ</a></li>
+            <li><a href="#skills" class="nav-link">ทักษะ</a></li>
+            <li><a href="#gallery" class="nav-link">ผลงาน</a></li>
+            <li><a href="#contact" class="nav-link">ติดต่อ</a></li>
         </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+
+        <div class="nav-actions">
+            <button class="icon-btn theme-toggle" type="button" aria-label="เปลี่ยนโหมดสี" title="เปลี่ยนโหมดสี">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="burger" type="button" aria-label="เปิดเมนู" aria-expanded="false" aria-controls="navLinks">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1><span class="highlight">นายธนายุทธ ปานสุด</span></h1>
-            <h2>จบจาก <span class="typing-text"></span></h2>
-            <a href="#contact" class="btn">ติดต่อ</a>
-            <a href="#about" class="btn btn-outline">รู้จักเพิ่มเติม</a>
-        </div>
-        <div class="hero-img">
-            <img src="https://img2.pic.in.th/D750F5D9-C53A-42DB-9196-C6D72CED0FC3.jpeg" alt="Profile Pictureeeeeeeeeee">
-        </div>
-    </section>
-
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">ประวัติการศึกษาและการทำงาน</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="circle-dot"></div>
-                    <h3 class="timeline-date">2559 - 2563</h3>
-                    <h4 class="timeline-title">ครุศาสตรบัณฑิต สาขาคอมพิวเตอร์และเทคโนโลยีการศึกษา</h4>
-                    <p class="timeline-text">มหาวิทยาลัยราชภัฏนครสวรรค์</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="circle-dot"></div>
-                    <h3 class="timeline-date">2564</h3>
-                    <h4 class="timeline-title">ทำงานโครงการ U2T</h4>
-                    <p class="timeline-text">เป็นผู้ลงสำรวจ สืบค้นข้อมูล จัดทำสรุปโครงการ</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="circle-dot"></div>
-                    <h3 class="timeline-date">2565 - ปัจจุบับ</h3>
-                    <h4 class="timeline-title">ครูอัตราจ้าง</h4>
-                    <p class="timeline-text">โรงเรียนหันคาราษฎร์รังสฤษดิ์</p>
+    <main>
+        <section id="home" class="hero section-anchor">
+            <div class="hero-bg" aria-hidden="true"></div>
+            <div class="hero-content reveal">
+                <p class="eyebrow">Computer Teacher Portfolio</p>
+                <h1><span class="name-line">นายธนายุทธ</span> <span class="name-line">ปานสุด</span></h1>
+                <h2>จบจาก <span class="typing-text"></span><span class="typing-cursor" aria-hidden="true"></span></h2>
+                <p class="hero-description">
+                    ครูคอมพิวเตอร์ที่สนใจการออกแบบสื่อการสอน เทคโนโลยีเพื่อการเรียนรู้ และการสร้างกิจกรรมที่ทำให้นักเรียนลงมือคิด ลงมือทำ และสนุกกับดิจิทัลมากขึ้น
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> ติดต่อ</a>
+                    <a href="#gallery" class="btn btn-outline"><i class="fas fa-images"></i> ดูผลงาน</a>
+                    <button class="btn btn-soft" type="button" id="downloadPortfolio"><i class="fas fa-file-pdf"></i> บันทึก PDF</button>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="skills" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">ทักษะความสามารถ</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Programming</h3>
-                    <p>Python, HTML/CSS, JavaScript, Scratch</p>
+            <div class="hero-visual reveal">
+                <div class="profile-frame">
+                    <img src="https://img2.pic.in.th/D750F5D9-C53A-42DB-9196-C6D72CED0FC3.jpeg" alt="รูปโปรไฟล์ นายธนายุทธ ปานสุด">
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-network-wired"></i>
-                    <h3>Network & Hardware</h3>
-                    <p>การซ่อมบำรุงคอมพิวเตอร์, การติดตั้งระบบเครือข่ายเบื้องต้น</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-photo-video"></i>
-                    <h3>Multimedia</h3>
-                    <p>Photoshop, Canva, Premiere Pro (ตัดต่อวิดีโอสื่อการสอน)</p>
-                </div>
-                 <div class="skill-card">
+                <div class="hero-note">
                     <i class="fas fa-chalkboard-teacher"></i>
-                    <h3>Teaching Tools</h3>
-                    <p>Google Workspace for Education, Kahoot, Quizizz</p>
+                    <span>ครูคอมพิวเตอร์และเทคโนโลยีการศึกษา</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="gallery" class="section">
-        <div class="container">
-            <h2 class="section-title">ภาพกิจกรรมและผลงาน</h2>
-            <div class="gallery-grid">
-                <div class="grid1">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/IMG_6387c64c13e29cd6d01f.jpeg" alt="Activity 1">
-                    <h3>การประกวดผลงานที่มีการปฏิบัติที่เป็นเลิศ</h3>
-                </div>
-                <div class="grid2">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/IMG_6389921bf02cf3f1c987.jpeg" alt="Activity 2">
-                    <h3>รางวัลสุดยอดครูระดับมัธยมศึกษา ระดับเหรียญเงิน</h3>
-                </div>
-                <div class="grid3">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/IMG_6390f58468cf992ada9c.jpeg" alt="Activity 3">
-                    <h3>กิจกรรมแชร์แนวคิดแลกเปลี่ยนเรียนรู้ Ai</h3>
-                </div>
-                <div class="grid4">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/IMG_6391dbe9f6d7fbbdfdaf.jpeg" alt="Activity 4">
-                    <h3>ผ่านการอบรมเชิงปฏิบัติงาน การเพิ่มประสิธิภาพ</h3>
-                </div>
-                <div class="grid5">
-                    <img src="https://img2.pic.in.th/-b5fb6f0a8343582d.jpeg" alt="Activity 5">
-                    <h3>วิทยากรค่าย เทคโนโลยี</h3>
-                </div>
-                <div class="grid6">
-                    <img src="https://img2.pic.in.th/d7c61880161bebf6fe5ed19415688329.jpeg" alt="Activity 6">
-                    <h3>ครูที่ปรึกษาดีเด่น</h3>
-                </div>
-                <div class="grid7">
-                    <img src="https://img2.pic.in.th/ad08eea0257b21cff544c424922ab2e0.jpeg" alt="Activity 7">
-                    <h3>ครูผู้มีความประพฤติ ปฏิบัติตนเป็นแบบอย่างที่ดี</h3>
-                </div>
-                <div class="grid8">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/6792cf5ff2760fcca0254cad33117afc.jpeg" alt="Activity 8">
-                    <h3>เข้าร่วมโครงการ วัฒนธรรมท้องถิ่นสู่งานศิลป์งานฝีมือ</h3>
-                </div>
-                <div class="grid9">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/DC_Basic_Certificate_page-0001.jpg" alt="Activity 9">
-                    <h3>อบรมหลักสูตรพัฒนาสมรรถนะดิจิทัลระดับพื้นฐาน</h3>
-                </div>
-                <div class="grid10">
-                    <img src="https://img2.pic.in.th/DC_Intermediate_Certificate_page-0001.jpg" alt="Activity 10">
-                    <h3>อบรมหลักสูตรพัฒนาสมรรถนะดิจิทัลระดับกลาง</h3>
-                </div>
-                <div class="grid11">
-                    <img src="" alt="Activity 11">
-                    <h3></h3>
-                </div>
-                <div class="grid12">
-                    <img src="" alt="Activity 12">
-                    <h3></h3>
-                </div>
-                
+        <section class="stats-strip" aria-label="สถิติผลงาน">
+            <div class="stat-item reveal">
+                <strong data-count="4">0</strong>
+                <span>ปีประสบการณ์สอน</span>
             </div>
-        </div>
-    </section>
+            <div class="stat-item reveal">
+                <strong data-count="10">0</strong>
+                <span>กิจกรรมและผลงาน</span>
+            </div>
+            <div class="stat-item reveal">
+                <strong data-count="4">0</strong>
+                <span>ด้านทักษะหลัก</span>
+            </div>
+            <div class="stat-item reveal">
+                <strong data-count="2">0</strong>
+                <span>หลักสูตรดิจิทัล</span>
+            </div>
+        </section>
 
-    <footer id="contact">
-        <div class="container">
-            <h2>พร้อมที่จะร่วมงานกับโรงเรียนท้องถิ่น</h2>
-            <div class="social-links">
-                <a href="https://www.facebook.com/thanayut.sd.pansut/?locale=th_TH"><i class="fab fa-facebook"></i> Facebook</a>
-                <a href="https://mail.google.com/mail/u/0/#inbox?compose=new"><i class="fas fa-envelope"></i> thanayuts6778@gmail.com</a>
-                <a href="#"><i class="fas fa-phone"></i> 091-028-7930</a>
-                <a href="https://github.com/Portfolio-Thanayut"><i class="fab fa-github"></i> GitHub</a>
+        <section id="about" class="section section-anchor">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Background</p>
+                    <h2 class="section-title">ประวัติการศึกษาและการทำงาน</h2>
+                    <p>เส้นทางการเรียนและการทำงานที่เชื่อมโยงความรู้ด้านคอมพิวเตอร์กับการพัฒนาผู้เรียน</p>
+                </div>
+
+                <div class="timeline">
+                    <article class="timeline-item reveal">
+                        <div class="circle-dot"></div>
+                        <h3 class="timeline-date">2559 - 2563</h3>
+                        <h4 class="timeline-title">ครุศาสตรบัณฑิต สาขาคอมพิวเตอร์และเทคโนโลยีการศึกษา</h4>
+                        <p class="timeline-text">มหาวิทยาลัยราชภัฏนครสวรรค์</p>
+                    </article>
+                    <article class="timeline-item reveal">
+                        <div class="circle-dot"></div>
+                        <h3 class="timeline-date">2564</h3>
+                        <h4 class="timeline-title">ทำงานโครงการ U2T</h4>
+                        <p class="timeline-text">ผู้ลงสำรวจ สืบค้นข้อมูล และจัดทำสรุปโครงการ</p>
+                    </article>
+                    <article class="timeline-item reveal">
+                        <div class="circle-dot"></div>
+                        <h3 class="timeline-date">2565 - ปัจจุบัน</h3>
+                        <h4 class="timeline-title">ครูอัตราจ้าง</h4>
+                        <p class="timeline-text">โรงเรียนหันคาราษฎร์รังสฤษดิ์</p>
+                    </article>
+                </div>
             </div>
-            <p>&copy; 2025 Teacher Computer Portfolio. Designed by Mr.Thanayut</p>
+        </section>
+
+        <section id="skills" class="section bg-light section-anchor">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Skills</p>
+                    <h2 class="section-title">ทักษะความสามารถ</h2>
+                    <p>รวมทักษะด้านการสอน สื่อดิจิทัล โปรแกรมมิ่ง และงานระบบพื้นฐาน</p>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card reveal">
+                        <i class="fas fa-code"></i>
+                        <h3>Programming</h3>
+                        <p>Python, HTML/CSS, JavaScript, Scratch</p>
+                        <div class="skill-meter" aria-label="ระดับทักษะ Programming 85%">
+                            <span style="--level: 85%"></span>
+                        </div>
+                    </article>
+                    <article class="skill-card reveal">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Network & Hardware</h3>
+                        <p>ซ่อมบำรุงคอมพิวเตอร์และติดตั้งระบบเครือข่ายเบื้องต้น</p>
+                        <div class="skill-meter" aria-label="ระดับทักษะ Network & Hardware 78%">
+                            <span style="--level: 78%"></span>
+                        </div>
+                    </article>
+                    <article class="skill-card reveal">
+                        <i class="fas fa-photo-video"></i>
+                        <h3>Multimedia</h3>
+                        <p>Photoshop, Canva, Premiere Pro และสื่อการสอนวิดีโอ</p>
+                        <div class="skill-meter" aria-label="ระดับทักษะ Multimedia 88%">
+                            <span style="--level: 88%"></span>
+                        </div>
+                    </article>
+                    <article class="skill-card reveal">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h3>Teaching Tools</h3>
+                        <p>Google Workspace for Education, Kahoot, Quizizz</p>
+                        <div class="skill-meter" aria-label="ระดับทักษะ Teaching Tools 90%">
+                            <span style="--level: 90%"></span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section section-anchor">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Gallery</p>
+                    <h2 class="section-title">ภาพกิจกรรมและผลงาน</h2>
+                    <p>กดเลือกหมวดหมู่เพื่อดูผลงานที่สนใจ หรือกดรูปเพื่อดูภาพขนาดใหญ่</p>
+                </div>
+
+                <div class="filter-tabs reveal" role="list" aria-label="หมวดหมู่ผลงาน">
+                    <button class="filter-btn active" type="button" data-filter="all">ทั้งหมด</button>
+                    <button class="filter-btn" type="button" data-filter="award">รางวัล</button>
+                    <button class="filter-btn" type="button" data-filter="training">อบรม</button>
+                    <button class="filter-btn" type="button" data-filter="activity">กิจกรรม</button>
+                </div>
+
+                <div class="gallery-grid">
+                    <article class="gallery-card reveal" data-category="award">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/IMG_6387c64c13e29cd6d01f.jpeg" alt="การประกวดผลงานที่มีการปฏิบัติที่เป็นเลิศ">
+                        <div class="gallery-caption">
+                            <span>รางวัล</span>
+                            <h3>การประกวดผลงานที่มีการปฏิบัติที่เป็นเลิศ</h3>
+                        </div>
+                    </article>
+                    <article class="gallery-card reveal" data-category="award">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/IMG_6389921bf02cf3f1c987.jpeg" alt="รางวัลสุดยอดครูระดับมัธยมศึกษา ระดับเหรียญเงิน">
+                        <div class="gallery-caption">
+                            <span>รางวัล</span>
+                            <h3>รางวัลสุดยอดครูระดับมัธยมศึกษา ระดับเหรียญเงิน</h3>
+                        </div>
+                    </article>
+                    <article class="gallery-card reveal" data-category="activity">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/IMG_6390f58468cf992ada9c.jpeg" alt="กิจกรรมแชร์แนวคิดแลกเปลี่ยนเรียนรู้ AI">
+                        <div class="gallery-caption">
+                            <span>กิจกรรม</span>
+                            <h3>กิจกรรมแชร์แนวคิดแลกเปลี่ยนเรียนรู้ AI</h3>
+                        </div>
+                    </article>
+                    <article class="gallery-card reveal" data-category="training">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/IMG_6391dbe9f6d7fbbdfdaf.jpeg" alt="ผ่านการอบรมเชิงปฏิบัติงาน การเพิ่มประสิทธิภาพ">
+                        <div class="gallery-caption">
+                            <span>อบรม</span>
+                            <h3>อบรมเชิงปฏิบัติการเพิ่มประสิทธิภาพ</h3>
+                        </div>
+                    </article>
+                    <article class="gallery-card reveal" data-category="activity">
+                        <img src="https://img2.pic.in.th/-b5fb6f0a8343582d.jpeg" alt="วิทยากรค่ายเทคโนโลยี">
+                        <div class="gallery-caption">
+                            <span>กิจกรรม</span>
+                            <h3>วิทยากรค่ายเทคโนโลยี</h3>
+                        </div>
+                    </article>
+                    <article class="gallery-card reveal" data-category="award">
+                        <img src="https://img2.pic.in.th/d7c61880161bebf6fe5ed19415688329.jpeg" alt="ครูที่ปรึกษาดีเด่น">
+                        <div class="gallery-caption">
+                            <span>รางวัล</span>
+                            <h3>ครูที่ปรึกษาดีเด่น</h3>
+                        </div>
+                    </article>
+                    <article class="gallery-card reveal" data-category="award">
+                        <img src="https://img2.pic.in.th/ad08eea0257b21cff544c424922ab2e0.jpeg" alt="ครูผู้มีความประพฤติ ปฏิบัติตนเป็นแบบอย่างที่ดี">
+                        <div class="gallery-caption">
+                            <span>รางวัล</span>
+                            <h3>ครูผู้มีความประพฤติ ปฏิบัติตนเป็นแบบอย่างที่ดี</h3>
+                        </div>
+                    </article>
+                    <article class="gallery-card reveal" data-category="activity">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/6792cf5ff2760fcca0254cad33117afc.jpeg" alt="เข้าร่วมโครงการวัฒนธรรมท้องถิ่นสู่งานศิลป์งานฝีมือ">
+                        <div class="gallery-caption">
+                            <span>กิจกรรม</span>
+                            <h3>โครงการวัฒนธรรมท้องถิ่นสู่งานศิลป์งานฝีมือ</h3>
+                        </div>
+                    </article>
+                    <article class="gallery-card reveal" data-category="training">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/DC_Basic_Certificate_page-0001.jpg" alt="อบรมหลักสูตรพัฒนาสมรรถนะดิจิทัลระดับพื้นฐาน">
+                        <div class="gallery-caption">
+                            <span>อบรม</span>
+                            <h3>พัฒนาสมรรถนะดิจิทัลระดับพื้นฐาน</h3>
+                        </div>
+                    </article>
+                    <article class="gallery-card reveal" data-category="training">
+                        <img src="https://img2.pic.in.th/DC_Intermediate_Certificate_page-0001.jpg" alt="อบรมหลักสูตรพัฒนาสมรรถนะดิจิทัลระดับกลาง">
+                        <div class="gallery-caption">
+                            <span>อบรม</span>
+                            <h3>พัฒนาสมรรถนะดิจิทัลระดับกลาง</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section section-anchor">
+            <div class="container contact-layout">
+                <div class="contact-copy reveal">
+                    <p class="eyebrow">Contact</p>
+                    <h2>พร้อมร่วมพัฒนาการเรียนรู้ดิจิทัล</h2>
+                    <p>สามารถติดต่อเพื่อประสานงานกิจกรรม สื่อการสอน งานเทคโนโลยี หรือพูดคุยเรื่องการพัฒนาผู้เรียนได้โดยตรง</p>
+
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/thanayut.sd.pansut/?locale=th_TH" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="mailto:thanayuts6778@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                            <span>thanayuts6778@gmail.com</span>
+                        </a>
+                        <a href="tel:0910287930">
+                            <i class="fas fa-phone"></i>
+                            <span>091-028-7930</span>
+                        </a>
+                        <a href="https://github.com/Portfolio-Thanayut" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal" id="contactForm">
+                    <label>
+                        ชื่อผู้ติดต่อ
+                        <input type="text" name="name" placeholder="กรอกชื่อของคุณ" required>
+                    </label>
+                    <label>
+                        อีเมล
+                        <input type="email" name="email" placeholder="example@email.com" required>
+                    </label>
+                    <label>
+                        ข้อความ
+                        <textarea name="message" rows="5" placeholder="รายละเอียดที่ต้องการติดต่อ" required></textarea>
+                    </label>
+                    <button class="btn btn-primary" type="submit"><i class="fas fa-paper-plane"></i> ส่งข้อความ</button>
+                    <p class="form-status" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+            <p>&copy; <span id="currentYear">2026</span> Teacher Computer Portfolio. Designed by Mr.Thanayut</p>
+            <a href="#home">กลับหน้าแรก</a>
         </div>
     </footer>
 
-    <div id="imageModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
+    <div id="imageModal" class="modal" aria-hidden="true" role="dialog" aria-label="ดูภาพผลงานขนาดใหญ่">
+        <button class="modal-close" type="button" aria-label="ปิดภาพ">&times;</button>
+        <button class="modal-nav modal-prev" type="button" aria-label="ภาพก่อนหน้า"><i class="fas fa-chevron-left"></i></button>
+        <figure class="modal-figure">
+            <img class="modal-content" id="img01" alt="">
+            <figcaption id="modalCaption"></figcaption>
+        </figure>
+        <button class="modal-nav modal-next" type="button" aria-label="ภาพถัดไป"><i class="fas fa-chevron-right"></i></button>
     </div>
+
+    <button class="back-to-top" type="button" aria-label="กลับขึ้นด้านบน">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
 </html>
-                
